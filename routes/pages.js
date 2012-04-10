@@ -7,7 +7,7 @@ exports.index = function(req, res) {
 };
 
 exports.show = function(req, res) {
-	name = req.params.name;
+	var name = req.params.name;
 	page.find(name, function(err, body) {
 		res.render('pages/show', { title: 'Page: ' + name, name: name, body: body });
 	});
